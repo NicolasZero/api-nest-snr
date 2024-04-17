@@ -1,6 +1,8 @@
 import { Controller,Get } from '@nestjs/common';
 import { LocalitiesService } from "./localities.service";
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('localities')
 @Controller('localities')
 export class LocalitiesController {
 
@@ -13,6 +15,16 @@ export class LocalitiesController {
     
     @Get('state')
     getAllStates(){
+        return this.localitiesService.getAllStates()
+    }
+
+    @Get('municipality')
+    getAllMunicipalities(){
+        return this.localitiesService.getAllStates()
+    }
+
+    @Get('parish')
+    getAllParishes(){
         return this.localitiesService.getAllStates()
     }
 }

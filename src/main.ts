@@ -10,6 +10,7 @@ async function bootstrap() {
     .setDescription('Una API con NestJs para el SNR de INAMUJER')
     .setVersion('1.0')
     .addTag('persons')
+    .addTag('localities')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('doc', app, document);

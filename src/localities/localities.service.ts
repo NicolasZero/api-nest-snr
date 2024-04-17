@@ -3,15 +3,12 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class LocalitiesService {
     getAllStates(){
-        return [{
-            id:1,
-            name:"Caracas",
-        },
-        {
-            id:2,
-            name:"Miranda"
-        }]
+        return "retorna todo los estados"
     }
-    getAllMunicipalities(){}
-    getAllParishes(){}
+    getAllMunicipalities(){
+        return "retorna todo los municipios"
+    }
+    getAllParishes(){
+        return "retorna todo los parroquias"
+    }
 }
